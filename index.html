@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<style>
+/* 统一全局字体为简体中文 */
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+body {
+  width: 100%; max-width: 750px; margin: 0 auto;
+  background: #F8F5F0;
+  font-family: 'PingFang SC', 'Microsoft YaHei', 'SimHei', sans-serif;
+  color: #1A1A1A; line-height: 1.5;
+}
+
+/* 头部样式适配 */
+.hero {
+  background: #F0EBE0;
+  padding: 40px 24px 40px;
+  border-bottom: 2px solid #C4A060;
+  position: relative; overflow: hidden;
+}
+.hero-line { width: 40px; height: 2px; background: #C4A060; margin-bottom: 20px; }
+.hero-label { font-size: 11px; letter-spacing: 0.2em; color: #A89880; text-transform: uppercase; margin-bottom: 14px; }
+.hero-title { font-size: 28px; font-weight: bold; line-height: 1.3; margin-bottom: 24px; }
+.hero-title .gold { color: #C4A060; }
+.hero-sub { font-size: 14px; color: #6B6050; line-height: 1.8; }
+
+/* 通用板块布局 */
+.section { padding: 30px 24px 0; }
+.section-header { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
+.section-num { font-family: 'Garamond', serif; font-size: 12px; color: #C4A060; }
+.section-title { font-size: 13px; letter-spacing: 0.15em; font-weight: bold; }
+.section-line { flex: 1; height: 1px; background: #DDD8CE; }
+
+/* 痛点区域 - 手机端单列显示 */
+.pain-grid { display: flex; flex-direction: column; gap: 10px; }
+.pain-item {
+  width: 100%; background: #FFFFFF; border: 1px solid #DDD8CE;
+  border-left: 3px solid #C4A060; border-radius: 2px;
+  padding: 16px 20px; font-size: 13px; color: #5A5448; line-height: 1.6;
+}
+
+/* 产品详情卡片 */
+.product-item { background: #FFFFFF; border: 1px solid #DDD8CE; border-radius: 2px; margin-bottom: 16px; overflow: hidden; }
+.prod-top { display: flex; justify-content: space-between; align-items: center; padding: 20px; border-bottom: 1px solid #F0EBE0; }
+.pname { font-size: 16px; font-weight: bold; margin-bottom: 4px; }
+.pname-en { font-family: 'Garamond', serif; font-size: 9px; color: #B0A898; text-transform: uppercase; }
+.prate { text-align: right; }
+.prate-num { font-family: 'Garamond', serif; font-size: 26px; color: #C4A060; line-height: 1; }
+.prate-sub { font-size: 9px; color: #A89880; }
+.pdesc { padding: 15px 20px; font-size: 13px; color: #7A7060; line-height: 1.7; background: #FDFAF6; }
+
+/* 信托价值 - 手机端单列显示 */
+.value-grid { display: flex; flex-direction: column; gap: 12px; }
+.value-item { background: #FFFFFF; border: 1px solid #DDD8CE; border-top: 3px solid #C4A060; padding: 20px; display: flex; gap: 15px; }
+.value-icon { font-family: 'SimSun', serif; font-size: 24px; color: #C4A060; font-weight: bold; }
+.value-name { font-size: 15px; font-weight: bold; margin-bottom: 6px; }
+.value-desc { font-size: 12px; color: #8A8070; line-height: 1.6; }
+
+/* 服务流程 */
+.flow-item { display: flex; gap: 16px; padding-bottom: 24px; position: relative; }
+.flow-item:not(:last-child)::before { content: ''; position: absolute; left: 18px; top: 40px; bottom: 0; width: 1px; background: #C4A060; opacity: 0.3; }
+.fnum-wrap { width: 36px; height: 36px; flex-shrink: 0; border: 1px solid #C4A060; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; z-index: 1; }
+.fnum { font-family: 'Garamond', serif; font-size: 14px; color: #C4A060; }
+.ftitle { font-size: 15px; font-weight: bold; margin-bottom: 4px; }
+.fdesc { font-size: 12px; color: #9B9387; }
+
+/* 页脚 */
+.footer-disc { margin-top: 40px; border-top: 2px solid #C4A060; background: #EDE8DC; padding: 20px 24px 40px; font-size: 10px; color: #A89880; line-height: 1.6; text-align: justify; }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-line"></div>
+  <div class="hero-label">Private Wealth Management</div>
+  <div class="hero-title">让您的资产，<br><span class="gold">在香港生根</span></div>
+  <div class="hero-sub">通过香港合规信托架构，实现资产的稳健增值、合法出海与跨代传承。</div>
+</div>
+
+<div class="section">
+  <div class="section-header">
+    <span class="section-num">01</span>
+    <span class="section-title">您 可 能 正 面 临 的 问 题</span>
+    <div class="section-line"></div>
+  </div>
+  <div class="pain-grid">
+    <div class="pain-item">境内资产集中，希望有一部分稳健配置在境外</div>
+    <div class="pain-item">已有香港保单，但还没有做系统的信托或传承规划</div>
+    <div class="pain-item">家族财富希望隔离风险，实现有序传承</div>
+    <div class="pain-item">寻找比银行定存收益更优的固收替代方案</div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-header">
+    <span class="section-num">02</span>
+    <span class="section-title">我 们 的 解 决 方 案</span>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="product-item">
+    <div class="prod-top">
+      <div><div class="pname">香港信托 · 固定收益配置</div><div class="pname-en">FIXED INCOME TRUST</div></div>
+      <div class="prate"><div class="prate-num">5%</div><div class="prate-sub">目标年化 · 每半年派息</div></div>
+    </div>
+    <div class="pdesc">通过香港持牌信托架构，将资金配置于固定收益类资产。资产由独立受托人托管，与个人资产法律隔离。封闭期3年或7年，起投3,000万港元。</div>
+  </div>
+
+  <div class="product-item">
+    <div class="prod-top">
+      <div><div class="pname">信托 + 地产基金 · 均衡配置</div><div class="pname-en">BALANCED TRUST + REAL ESTATE FUND</div></div>
+      <div class="prate"><div class="prate-num">&gt;5%</div><div class="prate-sub">综合目标年化</div></div>
+    </div>
+    <div class="pdesc">70% 配置固定收益资产，30% 配置精选香港地产投资基金。在稳健固收基础上叠加地产增值潜力。起投3,000万港元，封闭期3年。</div>
+  </div>
+
+  <div class="product-item">
+    <div class="prod-top">
+      <div><div class="pname">标准盛丰环球基金</div><div class="pname-en">STANDARD PERPETUAL GLOBAL FUND</div></div>
+      <div class="prate"><div class="prate-num">3%+</div><div class="prate-sub">基础年化 · 附赠配套信托</div></div>
+    </div>
+    <div class="pdesc">资产出海第一步，门槛较低。基础年化3%按年派息，期满享增值收益分成及地产份额优先购买权。起投1,000万港元，封闭期2年。</div>
+  </div>
+
+  <div class="product-item">
+    <div class="prod-top">
+      <div><div class="pname">香港房地产置业</div><div class="pname-en">HK PROPERTY ACQUISITION SERVICE</div></div>
+      <div class="prate"><div class="prate-num" style="font-size:20px;">定制</div><div class="prate-sub">一事一议</div></div>
+    </div>
+    <div class="pdesc">提供香港高端住宅及商业物业购置服务，支持通过信托架构持有。可根据需求定向搜寻房源，实现资产实物化配置。</div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-header">
+    <span class="section-num">03</span>
+    <span class="section-title">为 什 么 选 择 信 托 架 构</span>
+    <div class="section-line"></div>
+  </div>
+  <div class="value-grid">
+    <div class="value-item">
+      <div class="value-icon">隔</div>
+      <div>
+        <div class="value-name">资产隔离</div>
+        <div class="value-desc">信托资产独立于个人名下，有效隔离经营风险、婚姻风险及债务追索。</div>
+      </div>
+    </div>
+    <div class="value-item">
+      <div class="value-icon">传</div>
+      <div>
+        <div class="value-name">传承规划</div>
+        <div class="value-desc">按委托人意愿分配财富，避免遗产纠纷，实现跨代有序传承。</div>
+      </div>
+    </div>
+    <div class="value-item">
+      <div class="value-icon">出</div>
+      <div>
+        <div class="value-name">合规出海</div>
+        <div class="value-desc">香港持牌受托人托管，KYC/AML全程合规，资金路径清晰可追溯。</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-header">
+    <span class="section-num">04</span>
+    <span class="section-title">服 务 流 程</span>
+    <div class="section-line"></div>
+  </div>
+  <div class="flow-item">
+    <div class="fnum-wrap"><span class="fnum">01</span></div>
+    <div><div class="ftitle">需求沟通，方案匹配</div><div class="fdesc">了解您的资产状况与目标，推荐最适合的配置方案。</div></div>
+  </div>
+  <div class="flow-item">
+    <div class="fnum-wrap"><span class="fnum">02</span></div>
+    <div><div class="ftitle">KYC 审核，文件准备</div><div class="fdesc">备齐身份、地址及银行信息，由我方协助完成尽调流程。</div></div>
+  </div>
+  <div class="flow-item">
+    <div class="fnum-wrap"><span class="fnum">03</span></div>
+    <div><div class="ftitle">签署信托契约文件</div><div class="fdesc">客户本人签署全套法律文件，配合视频身份核认。</div></div>
+  </div>
+  <div class="flow-item">
+    <div class="fnum-wrap"><span class="fnum">04</span></div>
+    <div><div class="ftitle">资金入账，信托生效</div><div class="fdesc">客户直接将资金转入独立托管账户，约1–2周完成设立。</div></div>
+  </div>
+  <div class="flow-item">
+    <div class="fnum-wrap"><span class="fnum">05</span></div>
+    <div><div class="ftitle">定期结算，收益派发</div><div class="fdesc">按产品周期自动结算，收益直接入账。</div></div>
+  </div>
+</div>
+
+<div class="footer-disc">本资料仅供参考，不构成投资建议或法律要约。所有投资均存在风险，目标收益不代表未来实际表现。投资决策前请咨询独立税务及法律顾问。</div>
+
+</body>
+</html>
